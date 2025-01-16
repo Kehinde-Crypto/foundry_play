@@ -4,3 +4,4 @@
 [submodule "lib/openzepplin-contracts"]
 	path = lib/openzepplin-contracts
 	url = https://github.com/Openzepplin/openzepplin-contracts
+	remappings = ["ds-test/=lib/ds-test/src/","@openzepplin/=lib/openzepplin-contracts/"]
