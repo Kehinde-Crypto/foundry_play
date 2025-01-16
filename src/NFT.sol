@@ -55,12 +55,12 @@ abstract contract ERC721Tradable is IERC721 {
         // e.g., _safeTransfer(_owner, _buyer, _tokenId, "");
 
         // After the NFT is transferred, you would send the funds to the owner
-        payable(_owner).transfer(msg.value);
+        payable(_owner).transfer(msg.sender);
 
         // Emit an event for the purchase (optional but recommended)
         emit TokenPurchased(
             _tokenId,
-            address(uint160(msg.value)),
+            address(uint256(msg.sender)),
             _owner,
             _buyer
         );
